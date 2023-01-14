@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Recibir parámetros de la ruta (@PathVariable)</title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+	<div th:if="${resultado}" th:text="${resultado}"></div>
+	<!-- Se muestra otra vez el texto enviado porque coincide el nombre con el parámetro -->
+	<div th:if="${texto}" th:text="${texto}"></div>
+	<div th:if="${numero}" th:text="${numero}"></div>
+</body>
+</html>

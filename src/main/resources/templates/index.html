@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<h1 class="color-rojo" th:text="${titulo}"></h1>
+	<h2 class="color-azul"> Decorando con recursos estáticos</h2>
+	<div th:if="${users.size()==0}">No hay usuarios en la lista</div>
+	<img alt="texto alternativo" th:src="@{/images/image.jpg}">
+	<table th:if="${!users.isEmpty()}">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="user: ${users}">
+				<td th:text="${user.nombre}"></td>
+				<td th:text="${user.apellido}"></td>
+				<td th:text="${user.email}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

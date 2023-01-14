@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enviar parámetros por la ruta</title>
+</head>
+<body>
+	<h1>Enviar parámetros por la ruta</h1>
+	<ul>
+	<li>
+	<a th:href="@{/variables/string/} + 'Hola Spring'"> Pulsa para enviar Hola Spring por la ruta /variables/string/Hola Spring</a>
+	</li>
+	<li>
+	<a th:href="@{/variables/string/} + 'Hola Spring' + '/' + 5"> Pulsa para enviar Hola Spring y el número 5 por la ruta /variables/string/Hola Spring/5</a>
+	</li>
+	</ul>
+	
+</body>
+</html>

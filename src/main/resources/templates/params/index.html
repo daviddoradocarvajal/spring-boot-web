@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enviar parámetros</title>
+</head>
+<body>
+	<h1>Enviar parámetros</h1>
+	<ul>
+	<li>
+	<a th:href="@{/params/string(texto='Hola spring')}"> Pulsa para enviar Hola spring /params/string?texto= Hola spring</a>
+	</li>
+	<li>
+	<a th:href="@{/params/string(texto='Adios spring')}"> Pulsa para enviar Adios spring /params/string?texto= Adios spring</a>
+	</li>
+	<li>
+	<a th:href="@{/params/mix-params(texto='Doble parámetro', numero=4)}"> Pulsa para doble parámetro /params/mix-params?texto= Adios spring&numero=4</a>
+	</li>
+	<li>
+	<a th:href="@{/params/mix-params-request(texto='Doble parámetro', numero=4)}"> Pulsa para doble parámetro por HttpRequest /params/mix-params-request?texto= Adios spring&numero=4</a>
+	</li>
+	</ul>
+	
+</body>
+</html>

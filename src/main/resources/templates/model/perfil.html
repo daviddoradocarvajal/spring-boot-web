@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo2}"></h1>
+	<!-- Se accede no con el nombre del objeto si no con el string indicado de primer parámetro en addAttribute -->
+	Nombre: <span th:text="${user.nombre}"></span><br/>
+	Apellido: <span th:text="${user.apellido}"></span><br/>
+	<span th:if="${user.email}" th:text="${user.email}"></span>
+	<span th:if="${user.email == null}">No se ha encontrado correo para el usuario</span>
+</body>
+</html>
